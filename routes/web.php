@@ -61,3 +61,7 @@ Route::get('/vendor', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
+
+Route::get('/favorite', function () {
+    return view('wishlist');
+})->name('wishlist');

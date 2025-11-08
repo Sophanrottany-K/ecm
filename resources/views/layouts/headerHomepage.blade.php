@@ -231,7 +231,7 @@
                     </a>
                 </div>
                 <div class="d-inline-flex align-items-center gap-2">
-                    <a href="pages/orderHistory.html" class="d-inline-block btn btn-pill-primary">
+                    <a href="{{ route('order-history    ') }}" class="d-inline-block btn btn-pill-primary">
                         ប្រវត្តិកម្មង់
                     </a>
                     <a href="{{ route('login') }}"><button type="button"
