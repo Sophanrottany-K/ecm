@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('index');
 })->name('index');
 Route::get('/about', function () {
@@ -29,3 +29,35 @@ Route::get('/cartNcheckout', function () {
 Route::get('/cartNcheckout', function () {
     return view('cartNcheckout');
 })->name('cartNcheckout');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+
+Route::get('/homepage', function () {
+    return view('homepage');
+})->name('homepage');
+
+Route::get('/product-detail', function () {
+    return view('product-detail');
+})->name('product-detail');
+
+Route::get('/order-history', function () {
+    return view('orderHistory');
+})->name('order-history');
+
+Route::get('/vendor-detail', function () {
+    return view('vendor-detail');
+})->name('vendor-detail');
+
+Route::get('/vendor', function () {
+    return view('vendor');
+})->name('vendor');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');

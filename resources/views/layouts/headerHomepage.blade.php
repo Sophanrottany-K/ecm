@@ -109,22 +109,48 @@
                         <!-- Right (desktop) -->
                         <ul class="navbar-nav ms-0 ms-lg-4 align-items-center d-none d-lg-flex">
                             <li class="nav-item dropdown me-2">
-                                <button data-theme-toggle class="btn btn-theme-mode" aria-pressed="false"
-                                    title="Toggle theme">
-                                    <i class="bi bi-sun"></i>
-                                </button>
+                                <button data-theme-toggle="" class="btn btn-theme-mode" aria-pressed="false"
+                                    title="Toggle theme" aria-label="Change to dark theme"><i
+                                        class="bi bi-moon"></i></button>
                             </li>
                             <li class="nav-item me-2 position-relative">
-                                <a href="{{ route('login') }}" class="nav-link position-relative">
-                                    <i class="bi bi-cart3"></i>
+                                <a href="./wishlist.html" class="nav-link position-relative">
+                                    <i class="bi bi-heart"></i>
                                     <span
-                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">3</span>
                                 </a>
                             </li>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="{{ route('login') }}" class="btn btn-outline-primary fw-medium">ចូលប្រើ</a>
-                                <a href="{{ route('register') }}" class="btn btn-pill-primary fw-medium">ចុះឈ្មោះ</a>
-                            </div>
+                            <li class="nav-item me-2 position-relative">
+                                <a href="./cartNcheckout.html" class="nav-link position-relative">
+                                    <i class="bi bi-cart3"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
+                                </a>
+                            </li>
+
+                            <li class="user-link-page nav-item user-dropdown">
+                                <button type="button"
+                                    class="nav-link d-flex align-items-center border-0 bg-transparent"
+                                    style="width: 70px" id="userToggle" aria-expanded="false">
+                                    <img src="../assets/icons/user1.png" alt="avatar"
+                                        class="rounded-circle me-2 w-100">
+                                </button>
+
+                                <ul class="user-dropdown-menu w-50" id="userMenu">
+                                    <li class="user-dropdown-item menu-col">
+                                        <a href="../pages/profile.html" class="text-allTheme">ប្រវត្តិរូបខ្ញុំ</a>
+                                    </li>
+                                    <li class="user-dropdown-item menu-col">
+                                        <a href="../pages/orderHistory.html" class="text-allTheme">ប្រវត្តិកម្មង់</a>
+                                    </li>
+                                    <li class="user-dropdown-item leave border-0 py-2" data-bs-toggle="modal"
+                                        data-bs-target="#authQ">
+                                        <button type="button" class="border-0 text-allTheme bg-transparent">
+                                            ចាក់ចេញ
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
