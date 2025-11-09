@@ -30,10 +30,11 @@
                                     <!--  search + CTAs stacked on mobile -->
                                     <div class="d-flex gap-3 mb-4">
                                         <div class="d-flex flex-wrap gap-2">
-                                            <a href="pages/login.html" class="btn btn-pill-primary btn-lg"><i
+                                            <a href="{{ route('login.form') }}" class="btn btn-pill-primary btn-lg"><i
                                                     class="bi bi-bag me-2"></i>ចាប់ផ្តើមទិញ</a>
                                             <!-- user action ux flow will going to page auth  -->
-                                            <a href="pages/login.html" class="btn btn-pill-primary btn-lg rounded-pill"><i
+                                            <a href="{{ route('login.form') }}"
+                                                class="btn btn-pill-primary btn-lg rounded-pill"><i
                                                     class="bi bi-box-seam me-2"></i>ចូលរួមជាអ្នកលក់</a>
                                         </div>
                                     </div>

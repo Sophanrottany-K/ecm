@@ -66,6 +66,7 @@
 
             </div>
             <div class="col-12 col-lg-6 px-lg-5">
+
                 <div class="d-flex align-items-center flex-column pe-0 pe-lg-5" data-aos="fade-right"
                     data-aos-delay="100">
                     <div class="header mb-3 mb-lg-4 ">
@@ -77,18 +78,26 @@
                         <p class="description">
                             សូមបញ្ចូលព័ត៌មានរបស់អ្នកអោយបានត្រឹមត្រូវ ដើម្បីចូលប្រើប្រាស់គណនី។</p>
                     </div>
-
-                    <form action="./homepage.html" class="row g-4 g-lg-3 needs-validation" novalidate>
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form method="POST" action="{{ route('login.post') }}" class="row g-4 g-lg-3 needs-validation"
+                        novalidate>
+                        @csrf
                         <div class="input">
-                            <label for="email-login" class="form-label">អ៊ីមែល *</label>
-                            <input class="form-control rounded-5 " value="KhmerBoost@gmail.com" id="email-login"
-                                type="email" placeholder="បញ្ចូលអាស័យដ្ឋានអ៊ីមែល" required>
+                            <label for="email" class="form-label">អ៊ីមែល *</label>
+                            <input id="email" type="email" class="form-control" name="email" required autofocus>
                             <!-- <div class="invalid-feedback">Wrong Email! Please try again.</div> -->
                         </div>
                         <div class="input position-relative">
-                            <label for="password-login" class="form-label">ពាក្យសម្ងាត់ *</label>
-                            <input class="form-control rounded-5" value="KhmerBoost@123" id="password-login"
-                                type="password" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                            <label for="password" class="form-label">ពាក្យសម្ងាត់ *</label>
+                            <input id="password" type="password" class="form-control" name="password" required>
                             <i class="bi bi-eye-slash-fill icon-show"
                                 style="position: absolute; top: 55%; right:30px; cursor: pointer; font-size: 20px;"></i>
                             <!-- <div class="invalid-feedback">Wrong Password! Please try again.</div> -->

@@ -115,15 +115,17 @@
                                 </button>
                             </li>
                             <li class="nav-item me-2 position-relative">
-                                <a href="{{ route('login') }}" class="nav-link position-relative">
+                                <a href="{{ route('login.form') }}" class="nav-link position-relative">
                                     <i class="bi bi-cart3"></i>
                                     <span
                                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
                                 </a>
                             </li>
                             <div class="d-flex gap-2 mt-2">
-                                <a href="{{ route('login') }}" class="btn btn-outline-primary fw-medium">ចូលប្រើ</a>
-                                <a href="{{ route('register') }}" class="btn btn-pill-primary fw-medium">ចុះឈ្មោះ</a>
+                                <a href="{{ route('login.form') }}"
+                                    class="btn btn-outline-primary fw-medium">ចូលប្រើ</a>
+                                <a href="{{ route('register.role') }}"
+                                    class="btn btn-pill-primary fw-medium">ចុះឈ្មោះ</a>
                             </div>
                         </ul>
                     </div>
@@ -208,7 +210,7 @@
                     <a href="pages/orderHistory.html" class="d-inline-block btn btn-pill-primary">
                         ប្រវត្តិកម្មង់
                     </a>
-                    <a href="{{ route('login') }}"><button type="button"
+                    <a href="{{ route('login.form') }}"><button type="button"
                             class="border-0 bg-transparent btn btn-pill-primary" data-bs-toggle="modal"
                             data-bs-target="#authQ">
                             ចាកចេញ

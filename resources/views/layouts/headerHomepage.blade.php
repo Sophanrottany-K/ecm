@@ -138,17 +138,23 @@
 
                                 <ul class="user-dropdown-menu w-50" id="userMenu">
                                     <li class="user-dropdown-item menu-col">
-                                        <a href="../pages/profile.html" class="text-allTheme">ប្រវត្តិរូបខ្ញុំ</a>
+                                        <a href="{{ route('profile') }}" class="text-allTheme">ប្រវត្តិរូបខ្ញុំ</a>
                                     </li>
                                     <li class="user-dropdown-item menu-col">
                                         <a href="../pages/orderHistory.html" class="text-allTheme">ប្រវត្តិកម្មង់</a>
                                     </li>
-                                    <li class="user-dropdown-item leave border-0 py-2" data-bs-toggle="modal"
-                                        data-bs-target="#authQ">
-                                        <button type="button" class="border-0 text-allTheme bg-transparent">
+
+
+
+
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit" class="border-0 text-allTheme bg-transparent">
                                             ចាក់ចេញ
                                         </button>
-                                    </li>
+                                    </form>
+
+
                                 </ul>
                             </li>
                         </ul>
@@ -231,10 +237,10 @@
                     </a>
                 </div>
                 <div class="d-inline-flex align-items-center gap-2">
-                    <a href="{{ route('order-history    ') }}" class="d-inline-block btn btn-pill-primary">
+                    <a href="{{ route('order-history') }}" class="d-inline-block btn btn-pill-primary">
                         ប្រវត្តិកម្មង់
                     </a>
-                    <a href="{{ route('login') }}"><button type="button"
+                    <a href="{{ route('login.form') }}"><button type="button"
                             class="border-0 bg-transparent btn btn-pill-primary" data-bs-toggle="modal"
                             data-bs-target="#authQ">
                             ចាកចេញ
