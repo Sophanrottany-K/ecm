@@ -157,13 +157,13 @@ class AuthController extends Controller
     public function sellerDashboard()
     {
         if (!$this->checkAccess('Seller')) return $this->denyAccess();
-        return view('dashboard.seller');
+        return view('homepage.homepage');
     }
 
     public function customerDashboard()
     {
         if (!$this->checkAccess('Customer')) return $this->denyAccess();
-        return view('dashboard.customer');
+        return view('homepage.homepage');
     }
 
     // ---------------- PRIVATE HELPERS ----------------

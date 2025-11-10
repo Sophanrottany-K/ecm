@@ -64,13 +64,14 @@
                                 <div class="position-relative px-2 px-lg-4">
                                     <!-- Main visual element-->
                                     <img class="img-fluid rounded-4 shadow-strong w-100 object-fit-cover"
-                                        src="assets/images/hero-banner-kb.jpg" alt="Khmer handicraft" />
+                                        src="{{ asset('assets/images/hero-banner-kb.jpg') }}" alt="Khmer handicraft" />
 
                                     <div class="floating-card shadow-lg rounded-4 ms-3 ms-lg-4 d-none d-lg-block animate"
                                         style="width: 220px">
                                         <div class="d-flex align-items-center gap-3">
-                                            <img src="assets/images/product-img-2.jpg" class="rounded-3 object-fit-cover"
-                                                style="width: 56px; height: 56px" alt="product" />
+                                            <img src="{{ asset('assets/images/product-img-2.jpg') }}"
+                                                class="rounded-3 object-fit-cover" style="width: 56px; height: 56px"
+                                                alt="product" />
                                             <div>
                                                 <div class="fw-semibold">ម្រេចកំពត</div>
                                                 <small class="text-success">
@@ -126,7 +127,7 @@
                             <div class="swiper-slide">
                                 <div class="partner-tile">
                                     <div class="partner-logo">
-                                        <img src="assets/images/partner-moc.png" alt="ក្រសួងពាណិជ្ជកម្ម" />
+                                        <img src="{{ asset('assets/images/partner-moc.png') }}" alt="ក្រសួងពាណិជ្ជកម្ម" />
                                     </div>
                                     <div class="partner-name">ក្រសួងពាណិជ្ជកម្ម</div>
                                     <div class="partner-meta">Government Partner</div>
@@ -137,7 +138,7 @@
                             <div class="swiper-slide">
                                 <div class="partner-tile">
                                     <div class="partner-logo">
-                                        <img src="assets/images/partner-aba.png" alt="ABA Bank" />
+                                        <img src="{{ asset('assets/images/partner-aba.png') }}" alt="ABA Bank" />
                                     </div>
                                     <div class="partner-name">ABA Bank</div>
                                     <div class="partner-meta">Banking Partner</div>
@@ -148,7 +149,7 @@
                             <div class="swiper-slide">
                                 <div class="partner-tile">
                                     <div class="partner-logo">
-                                        <img src="assets/images/partner-wing.jpg" alt="Wing Cambodia" />
+                                        <img src="{{ asset('assets/images/partner-wing.jpg') }}" alt="Wing Cambodia" />
                                     </div>
                                     <div class="partner-name">Wing</div>
                                     <div class="partner-meta">Fintech Partner</div>
@@ -159,7 +160,8 @@
                             <div class="swiper-slide">
                                 <div class="partner-tile">
                                     <div class="partner-logo">
-                                        <img src="assets/images/partner-fade-trade.png" alt="Fair Trade Cambodia" />
+                                        <img src="{{ asset('assets/images/partner-fade-trade.png') }}"
+                                            alt="Fair Trade Cambodia" />
                                     </div>
                                     <div class="partner-name">Fair Trade Cambodia</div>
                                     <div class="partner-meta">NGO Partner</div>
@@ -170,7 +172,7 @@
                             <div class="swiper-slide">
                                 <div class="partner-tile">
                                     <div class="partner-logo">
-                                        <img src="assets/images/partner-vatanak.jpg" alt="TrueMoney" />
+                                        <img src="{{ asset('assets/images/partner-vatanak.jpg') }}" alt="TrueMoney" />
                                     </div>
                                     <div class="partner-name">TrueMoney</div>
                                     <div class="partner-meta">Payment Partner</div>
@@ -181,7 +183,7 @@
                             <div class="swiper-slide">
                                 <div class="partner-tile">
                                     <div class="partner-logo">
-                                        <img src="assets/images/partner-ox.png" alt="Oxfam Cambodia" />
+                                        <img src="{{ asset('assets/images/partner-ox.png') }}" alt="Oxfam Cambodia" />
                                     </div>
                                     <div class="partner-name">Oxfam Cambodia</div>
                                     <div class="partner-meta">NGO Partner</div>
@@ -254,7 +256,8 @@
                                     <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
-                                                <img class="card-img-top rounded-3" src="assets/images/product-img-1.jpg"
+                                                <img class="card-img-top rounded-3"
+                                                    src="{{ asset('assets/images/product-img-1.jpg') }}"
                                                     alt="Palm sugar" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
@@ -290,7 +293,7 @@
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
                                                 <img class="card-img-top rounded-3"
-                                                    src="assets/images/products/il_fullxfull.6317552416_mx5q.avif"
+                                                    src="{{ asset('assets/images/products/il_fullxfull.6317552416_mx5q.avif') }}"
                                                     alt="Silk scarf" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
@@ -325,7 +328,8 @@
                                     <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
-                                                <img class="card-img-top rounded-3" src="assets/images/product-img-2.jpg"
+                                                <img class="card-img-top rounded-3"
+                                                    src="{{ asset('assets/images/product-img-2.jpg') }}"
                                                     alt="Pepper" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
@@ -360,7 +364,8 @@
                                     <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
-                                                <img class="card-img-top rounded-3" src="assets/images/product-img-3.jpg"
+                                                <img class="card-img-top rounded-3"
+                                                    src="{{ asset('assets/images/product-img-3.jpg') }}"
                                                     alt="Ceramic" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
@@ -396,7 +401,7 @@
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
                                                 <img class="card-img-top rounded-3 bg-warning-subtle"
-                                                    src="assets/images/kiriku.png" alt="Ceramic" />
+                                                    src="{{ asset('assets/images/kiriku.png') }}" alt="Ceramic" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
 
@@ -430,8 +435,8 @@
                                     <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
-                                                <img class="card-img-top rounded-3" src="assets/images/sabo.png"
-                                                    alt="Ceramic" />
+                                                <img class="card-img-top rounded-3"
+                                                    src="{{ asset('assets/images/sabo.png') }}" alt="Ceramic" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
 
@@ -465,7 +470,8 @@
                                     <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
-                                                <img class="card-img-top rounded-3" src="assets/images/Mchhou krerng.webp"
+                                                <img class="card-img-top rounded-3"
+                                                    src="{{ asset('assets/images/Mchhou krerng.webp') }}"
                                                     alt="Ceramic" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
@@ -501,7 +507,8 @@
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
                                                 <img class="card-img-top rounded-3 border"
-                                                    src="assets/images/angkor-milke.jpeg" alt="Ceramic" />
+                                                    src="{{ asset('assets/images/angkor-milke.jpeg') }}"
+                                                    alt="Ceramic" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
 
@@ -579,8 +586,8 @@
                             <article class="card card-kb h-100 rounded-4 overflow-hidden">
                                 <!-- Cover -->
                                 <div class="position-relative">
-                                    <img src="assets/images/vendors/vendor-cover.jpg" class="vendor-cover w-100"
-                                        alt="Angkor Organics cover" />
+                                    <img src="{{ asset('assets/images/vendors/vendor-cover.jpg') }}"
+                                        class="vendor-cover w-100" alt="Angkor Organics cover" />
                                     <span class="badge badge-verified position-absolute top-0 start-0 m-2">
                                         Verified <i class="bi bi-patch-check-fill"></i>
                                     </span>
@@ -592,7 +599,7 @@
                                 <div class="card-body">
                                     <!-- Avatar + meta -->
                                     <div class="d-flex align-items-center gap-3 mb-2">
-                                        <img src="assets/images/commender/testi-1.avif"
+                                        <img src="{{ asset('assets/images/commender/testi-1.avif') }}"
                                             class="vendor-avatar rounded-circle border border-3 border-white"
                                             alt="Angkor Organics logo" />
                                         <div class="flex-grow-1">
@@ -655,14 +662,14 @@
                         <div class="col-12 col-md-6 col-lg-4 vendor-card" data-tags="handicraft souvenir">
                             <article class="card card-kb h-100 rounded-4 overflow-hidden">
                                 <div class="position-relative">
-                                    <img src="assets/images/vendors/vendor-cover-2.jpg" class="vendor-cover w-100"
-                                        alt="Khmer Craft cover" />
+                                    <img src="{{ asset('assets/images/vendors/vendor-cover-2.jpg') }}"
+                                        class="vendor-cover w-100" alt="Khmer Craft cover" />
                                     <span class="badge badge-verified position-absolute top-0 start-0 m-2">Verified <i
                                             class="bi bi-patch-check-fill"></i></span>
                                 </div>
                                 <div class="card-body">
                                     <div class="d-flex align-items-center gap-3 mb-2">
-                                        <img src="assets/images/vendors/120.jfif"
+                                        <img src="{{ asset('assets/images/vendors/120.jfif') }}"
                                             class="vendor-avatar rounded-circle border border-3 border-white"
                                             alt="Khmer Craft logo" />
                                         <div class="flex-grow-1">
@@ -683,12 +690,12 @@
                                         <span class="badge text-bg-light text-dark">វត្ថុអនុស្សាវរីយ៍</span>
                                     </div>
                                     <div class="mini-strip d-flex justify-content-center gap-2 mb-3">
-                                        <img src="assets/images/vendors/v-krama.jpg" class="mini-thumb rounded-3"
-                                            alt="Krama" />
-                                        <img src="assets/images/vendors/v-woodcrat.jpg" class="mini-thumb rounded-3"
-                                            alt="Basket" />
-                                        <img src="assets/images/vendors/v-souvenir.jpg" class="mini-thumb rounded-3"
-                                            alt="Wood craft" />
+                                        <img src="{{ asset('assets/images/vendors/v-krama.jpg') }}"
+                                            class="mini-thumb rounded-3" alt="Krama" />
+                                        <img src="{{ asset('assets/images/vendors/v-woodcrat.jpg') }}"
+                                            class="mini-thumb rounded-3" alt="Basket" />
+                                        <img src="{{ asset('assets/images/vendors/v-souvenir.jpg') }}"
+                                            class="mini-thumb rounded-3" alt="Wood craft" />
                                     </div>
                                     <div class="row text-center g-2 mb-3">
                                         <div class="col">
@@ -716,7 +723,7 @@
                         <div class="col-12 col-md-6 col-lg-4 vendor-card" data-tags="organic">
                             <article class="card card-kb h-100 rounded-4 overflow-hidden">
                                 <div class="position-relative">
-                                    <img src="assets/images/Blogs/blog-2.gif" class="vendor-cover w-100"
+                                    <img src="{{ asset('assets/images/Blogs/blog-2.gif') }}" class="vendor-cover w-100"
                                         alt="Farmer Market cover" />
                                 </div>
                                 <div class="card-body">
@@ -742,12 +749,12 @@
                                         <span class="badge text-bg-light pb-0">ផ្លែឈើ</span>
                                     </div>
                                     <div class="mini-strip d-flex gap-2 mb-3 justify-content-center">
-                                        <img src="assets/images/e-organic-1.jpg" class="mini-thumb rounded-3 w-50"
-                                            alt="Mango" />
-                                        <img src="assets/images/vendors/v-organic.jpg" class="mini-thumb rounded-3"
-                                            alt="Banana" />
-                                        <img src="assets/images/vendors/vendors-home.avif" class="mini-thumb rounded-3"
-                                            alt="Grapes" />
+                                        <img src="{{ asset('assets/images/e-organic-1.jpg') }}"
+                                            class="mini-thumb rounded-3 w-50" alt="Mango" />
+                                        <img src="{{ asset('assets/images/vendors/v-organic.jpg') }}"
+                                            class="mini-thumb rounded-3" alt="Banana" />
+                                        <img src="{{ asset('assets/images/vendors/vendors-home.avif') }}"
+                                            class="mini-thumb rounded-3" alt="Grapes" />
                                     </div>
                                     <div class="row text-center g-2 mb-3">
                                         <div class="col">
@@ -831,8 +838,8 @@
                         <div class="col-md-4">
                             <div class="card glass-soft h-100 shadow-sm p-4 rounded-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/commender/testi-1.avif" class="rounded-circle me-3"
-                                        style="width: 64px; height: 64px" alt="" />
+                                    <img src="{{ asset('assets/images/commender/testi-1.avif') }}"
+                                        class="rounded-circle me-3" style="width: 64px; height: 64px" alt="" />
                                     <div>
                                         <div class="fw-semibold card-title">រចនា</div>
                                         <small class="card-title">អ្នកទិញ</small>
@@ -846,8 +853,8 @@
                         <div class="col-md-4">
                             <div class="card glass-soft h-100 shadow-sm p-4 rounded-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/commender/testi-2.avif" class="rounded-circle me-3"
-                                        style="width: 64px; height: 64px" alt="" />
+                                    <img src="{{ asset('assets/images/commender/testi-2.avif') }}"
+                                        class="rounded-circle me-3" style="width: 64px; height: 64px" alt="" />
                                     <div>
                                         <div class="fw-semibold card-title">រតនា</div>
                                         <small class="card-title">អ្នកផលិត</small>
@@ -861,8 +868,8 @@
                         <div class="col-md-4">
                             <div class="card glass-soft h-100 shadow-sm p-4 rounded-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="assets/images/commender/testi-3.avif" class="rounded-circle me-3"
-                                        style="width: 64px; height: 64px" alt="" />
+                                    <img src="{{ asset('assets/images/commender/testi-3.avif') }}"
+                                        class="rounded-circle me-3" style="width: 64px; height: 64px" alt="" />
                                     <div>
                                         <div class="fw-semibold card-title">រដ្ឋា</div>
                                         <small class="card-title">អ្នកទិញ</small>
@@ -981,8 +988,9 @@
                             <a href="../pages/blog-details.html" class="text-decoration-none text-dark">
                                 <article class="card card-blog h-100 rounded-4">
                                     <figure class="kb-media m-0 position-relative">
-                                        <img class="card-img-top blog-img" src="assets/images/Blogs/blog-mrech-1.jpg"
-                                            alt="blog1" loading="lazy" decoding="async" />
+                                        <img class="card-img-top blog-img"
+                                            src="{{ asset('assets/images/Blogs/blog-mrech-1.jpg') }}" alt="blog1"
+                                            loading="lazy" decoding="async" />
                                         <span class="badge badge-verified position-absolute start-0 m-2">
                                             Tip <i class="bi bi-exclamation-circle"></i>
                                         </span>
@@ -1013,8 +1021,9 @@
                             <a href="../pages/blog-details.html" class="text-decoration-none text-dark">
                                 <article class="card card-blog h-100 rounded-4">
                                     <figure class="kb-media m-0 position-relative">
-                                        <img class="card-img-top blog-img" src="assets/images/Blogs/blog-2.gif"
-                                            alt="blog1" loading="lazy" decoding="async" />
+                                        <img class="card-img-top blog-img"
+                                            src="{{ asset('assets/images/Blogs/blog-2.gif') }}" alt="blog1"
+                                            loading="lazy" decoding="async" />
                                         <span class="badge badge-verified position-absolute start-0 m-2">
                                             Tip <i class="bi bi-exclamation-circle"></i>
                                         </span>
@@ -1046,8 +1055,9 @@
                             <a href="../pages/blog-details.html" class="text-decoration-none text-dark">
                                 <article class="card card-blog h-100 rounded-4">
                                     <figure class="kb-media m-0 position-relative">
-                                        <img class="card-img-top blog-img" src="assets/images/Blogs/blog-3.jpg"
-                                            alt="blog1" loading="lazy" decoding="async" />
+                                        <img class="card-img-top blog-img"
+                                            src="{{ asset('assets/images/Blogs/blog-3.jpg') }}" alt="blog1"
+                                            loading="lazy" decoding="async" />
                                         <span class="badge badge-verified position-absolute start-0 m-2">
                                             Tip <i class="bi bi-exclamation-circle"></i>
                                         </span>
@@ -1078,8 +1088,9 @@
                             <a href="../pages/blog-details.html" class="text-decoration-none text-dark">
                                 <article class="card card-blog h-100 rounded-4">
                                     <figure class="kb-media m-0 position-relative">
-                                        <img class="card-img-top blog-img" src="assets/images/Blogs/blog-4.jpg"
-                                            alt="blog1" loading="lazy" decoding="async" />
+                                        <img class="card-img-top blog-img"
+                                            src="{{ asset('assets/images/Blogs/blog-4.jpg') }}" alt="blog1"
+                                            loading="lazy" decoding="async" />
                                         <span class="badge badge-verified position-absolute start-0 m-2">
                                             Tip <i class="bi bi-exclamation-circle"></i>
                                         </span>

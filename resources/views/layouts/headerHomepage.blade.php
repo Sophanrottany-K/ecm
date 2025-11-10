@@ -8,24 +8,29 @@
     <!-- link favicon logo identify of topic  -->
 
     <!-- framework-css bootstrap  -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}" />
 
-    <!-- lib swiper.js  -->
+    <!-- Swiper.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- link bootstrap icon cdn-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
-    <!-- ************ link style ********* -->
-    <!-- Khmer font -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/login.css" />
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}" />
+
+    <!-- Khmer Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Suwannaphum:wght@100;300;400;700;900&display=swap"
-        rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet" />
 
-    <link rel="icon" href="assets/images/logo.png" />
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('assets/images/logo.png') }}') }}" />
+
 </head>
 
 <body>
@@ -43,8 +48,9 @@
             <!-- NAVBAR -->
             <nav class="navbar navbar-expand-xl py-0">
                 <div class="container ">
-                    <a class="navbar-brand" href="{{ route('index') }}">
-                        <img src="assets/images/logo.png" alt="brand-logo" class="logo-kb" data-theme-logo />
+                    <a class="navbar-brand" href="{{ route('homepage') }}">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="brand-logo" class="logo-kb"
+                            data-theme-logo />
                     </a>
 
                     <!-- Mobile toggler -> opens Offcanvas -->
@@ -57,12 +63,12 @@
                     <div class="collapse navbar-collapse" id="nav">
                         <ul class="navbar-nav me-3 mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('index') }}">ទំព័ដើម</a>
+                                <a class="nav-link active" href="{{ route('homepage') }}">ទំព័ដើម</a>
                             </li>
 
                             <!-- Products mega (desktop) -->
                             <li class="nav-item dropdown dropdown-mega">
-                                <a class="nav-link kb-underline" href="{{ route('product') }}"
+                                <a class="nav-link kb-underline" href="{{ route('product-homepage') }}"
                                     aria-expanded="false">ផលិតផល</a>
                             </li>
 
@@ -74,7 +80,7 @@
                                     <div class="row g-3">
                                         <div class="col-12 col-md-12 menu-col">
                                             <div class="menu-title">រុករក</div>
-                                            <a href="{{ route('vendor-list') }}"><i class="bi bi-people"></i>
+                                            <a href="{{ route('vendor-list-homepage') }}"><i class="bi bi-people"></i>
                                                 បញ្ជីអ្នកលក់</a>
 
                                             <div class="menu-title">សម្រាប់អ្នកលក់</div>
@@ -89,11 +95,9 @@
 
                             <!-- Tourism mega (desktop) -->
 
+
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('about') }}">អំពីយើង</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact') }}">ទំនាក់ទំនង</a>
+                                <a class="nav-link" href="{{ route('contact-homepage') }}">ទំនាក់ទំនង</a>
                             </li>
                         </ul>
 
@@ -114,14 +118,14 @@
                                         class="bi bi-moon"></i></button>
                             </li>
                             <li class="nav-item me-2 position-relative">
-                                <a href="./wishlist.html" class="nav-link position-relative">
+                                <a href="{{ route('wishlist') }}" class="nav-link position-relative">
                                     <i class="bi bi-heart"></i>
                                     <span
                                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">3</span>
                                 </a>
                             </li>
                             <li class="nav-item me-2 position-relative">
-                                <a href="./cartNcheckout.html" class="nav-link position-relative">
+                                <a href="{{ route('cart-homepage') }}" class="nav-link position-relative">
                                     <i class="bi bi-cart3"></i>
                                     <span
                                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
@@ -132,28 +136,25 @@
                                 <button type="button"
                                     class="nav-link d-flex align-items-center border-0 bg-transparent"
                                     style="width: 70px" id="userToggle" aria-expanded="false">
-                                    <img src="../assets/icons/user1.png" alt="avatar"
+                                    <img src="{{ asset('assets/icons/user1.png') }}" alt="avatar"
                                         class="rounded-circle me-2 w-100">
                                 </button>
 
-                                <ul class="user-dropdown-menu w-50" id="userMenu">
+                                <ul class="user-dropdown-menu w-100" id="userMenu">
                                     <li class="user-dropdown-item menu-col">
                                         <a href="{{ route('profile') }}" class="text-allTheme">ប្រវត្តិរូបខ្ញុំ</a>
                                     </li>
                                     <li class="user-dropdown-item menu-col">
                                         <a href="../pages/orderHistory.html" class="text-allTheme">ប្រវត្តិកម្មង់</a>
                                     </li>
-
-
-
-
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <button type="submit" class="border-0 text-allTheme bg-transparent">
-                                            ចាក់ចេញ
-                                        </button>
-                                    </form>
-
+                                    <li class="user-dropdown-item menu-col">
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="border-0 ">
+                                                ចាក់ចេញ
+                                            </button>
+                                        </form>
+                                    </li>
 
                                 </ul>
                             </li>
@@ -169,13 +170,14 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="mobileMenuLabel">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.png" alt="brand-logo" class="logo-kb w-50 h-50" data-theme-logo />
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="brand-logo" class="logo-kb w-50 h-50"
+                        data-theme-logo />
                 </a>
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column gap-2" accordion>
-            <a class="offcanvas-link text-start" href="{{ route('index') }}">ទំព័រដើម</a>
+            <a class="offcanvas-link text-start" href="{{ route('homepage') }}">ទំព័រដើម</a>
 
             <a class="offcanvas-link text-start" href="pages/products.html">ផលិតផល</a>
             <div class="accordion" id="accordionExample">

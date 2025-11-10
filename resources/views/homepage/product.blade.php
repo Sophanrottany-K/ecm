@@ -1,4 +1,4 @@
- @extends('layouts.master')
+ @extends('layouts.masterHomepage')
  @section('title', 'product')
  @section('content')
 

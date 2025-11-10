@@ -1,75 +1,50 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+/*
+|--------------------------------------------------------------------------
+| Public Pages
+|--------------------------------------------------------------------------
+*/
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/product', function () {
-    return view('product');
-})->name('product');
-
-Route::get('/vendor-list', function () {
-    return view('vendor-list');
-})->name('vendor-list');
-
-Route::get('/cartNcheckout', function () {
-    return view('cartNcheckout');
-})->name('cartNcheckout');
+Route::view('/', 'index')->name('index');
+Route::view('/about', 'about')->name('about');
+Route::view('/contact', 'contact')->name('contact-index');
+Route::view('/product', 'product')->name('product-index');
+Route::view('/vendor-list', 'vendor-list')->name('vendor-list-index');
+Route::view('/product-detail', 'product-detail')->name('product-detail-index');
+Route::view('/vendor-detail', 'vendor-detail')->name('vendor-detail-index');
+Route::view('/vendor', 'vendor')->name('vendor-index');
 
 
-Route::get('/cartNcheckout', function () {
-    return view('cartNcheckout');
-})->name('cartNcheckout');
-
-// Route::get('/login', function () {
-//     return view('auth.login');
-// })->name('login');
-
-// Route::get('/register', function () {
-//     return view('auth.register');
-// })->name('register');
-
-Route::get('/homepage', function () {
-    return view('homepage');
-})->name('homepage');
-
-Route::get('/product-detail', function () {
-    return view('product-detail');
-})->name('product-detail');
-
-Route::get('/order-history', function () {
-    return view('orderHistory');
-})->name('order-history');
-
-Route::get('/vendor-detail', function () {
-    return view('vendor-detail');
-})->name('vendor-detail');
-
-Route::get('/vendor', function () {
-    return view('vendor');
-})->name('vendor');
-
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
-
-Route::get('/favorite', function () {
-    return view('wishlist');
-})->name('wishlist');
+/*
+|--------------------------------------------------------------------------
+| Homepage (After Login)
+|--------------------------------------------------------------------------
+*/
+Route::prefix('homepage')->group(function () {
+    Route::view('/homepage', 'homepage.homepage')->name('homepage');
+    Route::view('/product', 'homepage.product')->name('product-homepage');
+    Route::view('/product-detail', 'homepage.product-detail')->name('product-detail-homepage');
+    Route::view('/order-history', 'homepage.orderHistory')->name('order-history');
+    Route::view('/vendor-detail', 'homepage.vendor-detail')->name('vendor-detail-homepage');
+    Route::view('/vendor', 'homepage.vendor')->name('vendor-homepage');
+    Route::view('/vendor-list', 'homepage.vendor-list')->name('vendor-list-homepage');
+    Route::view('/profile', 'homepage.profile')->name('profile');
+    Route::view('/favorite', 'homepage.wishlist')->name('wishlist');
+    Route::view('/contact', 'homepage.contact')->name('contact-homepage');
+    Route::view('/cart', 'homepage.cartNcheckout')->name('cart-homepage');
+});
 
 
-// Login & Register
+/*
+|--------------------------------------------------------------------------
+| Authentication
+|--------------------------------------------------------------------------
+*/
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::get('/register/role', [AuthController::class, 'showRoleSelection'])->name('register.role');
@@ -77,13 +52,16 @@ Route::post('/register/step1', [AuthController::class, 'registerStep1'])->name('
 Route::post('/register/step2', [AuthController::class, 'registerStep2'])->name('register.step2');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Dashboards (protected manually)
-Route::get('/dashboard/admin', [AuthController::class, 'adminDashboard'])->name('dashboard.admin');
-Route::get('/dashboard/seller', [AuthController::class, 'sellerDashboard'])->name('dashboard.seller');
-Route::get('/dashboard/customer', [AuthController::class, 'customerDashboard'])->name('dashboard.customer');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+/*
+|--------------------------------------------------------------------------
+| Dashboards
+|--------------------------------------------------------------------------
+*/
+Route::prefix('dashboard')->group(function () {
+    Route::get('/admin', [AuthController::class, 'adminDashboard'])->name('dashboard.admin');
+    Route::get('/seller', [AuthController::class, 'sellerDashboard'])->name('homepage.seller');
+    Route::get('/customer', [AuthController::class, 'customerDashboard'])->name('homepage.customer');
+});
 
-
-
-// Dashboards
+route::resource('/category', CategoryController::class);

@@ -62,7 +62,7 @@
 
                             <!-- Products mega (desktop) -->
                             <li class="nav-item dropdown dropdown-mega">
-                                <a class="nav-link kb-underline" href="{{ route('product') }}"
+                                <a class="nav-link kb-underline" href="{{ route('product-index') }}"
                                     aria-expanded="false">ផលិតផល</a>
                             </li>
 
@@ -74,7 +74,7 @@
                                     <div class="row g-3">
                                         <div class="col-12 col-md-12 menu-col">
                                             <div class="menu-title">រុករក</div>
-                                            <a href="{{ route('vendor-list') }}"><i class="bi bi-people"></i>
+                                            <a href="{{ route('vendor-list-index') }}"><i class="bi bi-people"></i>
                                                 បញ្ជីអ្នកលក់</a>
 
                                             <div class="menu-title">សម្រាប់អ្នកលក់</div>
@@ -93,7 +93,7 @@
                                 <a class="nav-link" href="{{ route('about') }}">អំពីយើង</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact') }}">ទំនាក់ទំនង</a>
+                                <a class="nav-link" href="{{ route('contact-index') }}">ទំនាក់ទំនង</a>
                             </li>
                         </ul>
 
