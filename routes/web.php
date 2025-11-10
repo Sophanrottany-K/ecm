@@ -63,5 +63,3 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/seller', [AuthController::class, 'sellerDashboard'])->name('homepage.seller');
     Route::get('/customer', [AuthController::class, 'customerDashboard'])->name('homepage.customer');
 });
-
-route::resource('/category', CategoryController::class);

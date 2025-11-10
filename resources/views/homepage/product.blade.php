@@ -69,7 +69,7 @@
                                  <div class="row g-4">
                                      <!-- Card 1 -->
                                      <div class="pro-list col-12 col-md-6 col-lg-4">
-                                         <a class="text-decoration-none" href="product-detail.html">
+                                         <a class="text-decoration-none" href="{{ route('product-detail-homepage') }}">
                                              <div class="pro-list-card card-kb position-relative p-3 h-100">
                                                  <img class="product-img w-100 border"
                                                      src="https://s3.ams.com.kh/economy/2023/04/KampongSpeupalmsugar-scaled.jpg"
@@ -93,7 +93,7 @@
                                                      <a class="btn align-content-center px-3 btn-pill-primary"
                                                          data-bs-toggle="modal" data-bs-target="#wishlistModal"><i
                                                              class="bi bi-heart me-1"></i>ពេញចិត្ត</a>
-                                                     <a href="product-detail.html"
+                                                     <a href="{{ route('product-detail-homepage') }}"
                                                          class="btn align-content-center px-3 btn-pill-primary"><i
                                                              class="bi bi-arrow-right me-1"></i>ព័ត៌មានលម្អិត</a>
                                                  </div>
@@ -103,7 +103,7 @@
 
                                      <!-- Card 2 -->
                                      <div class="pro-list col-12 col-md-6 col-lg-4">
-                                         <a class="text-decoration-none" href="product-detail.html">
+                                         <a class="text-decoration-none" href="{{ route('product-detail-homepage') }}">
                                              <div class="pro-list-card card-kb position-relative p-3 h-100">
                                                  <img class="product-img w-100 border"
                                                      src="https://panasiam.com/media/dd/a6/b3/1716925621/1030020001-krama-blackgrey-01-jpg_1716925620.jpg?ts=1716925621"
@@ -127,7 +127,7 @@
                                                      <a class="btn align-content-center px-3 btn-pill-primary"
                                                          data-bs-toggle="modal" data-bs-target="#wishlistModal"><i
                                                              class="bi bi-heart me-1"></i>ពេញចិត្ត</a>
-                                                     <a href="product-detail.html"
+                                                     <a href="{{ route('product-detail-homepage') }}"
                                                          class="btn align-content-center px-3 btn-pill-primary"><i
                                                              class="bi bi-arrow-right me-1"></i>ព័ត៌មានលម្អិត</a>
                                                  </div>
@@ -137,7 +137,7 @@
 
                                      <!-- Card 3 -->
                                      <div class="pro-list col-12 col-md-6 col-lg-4">
-                                         <a class="text-decoration-none" href="product-detail.html">
+                                         <a class="text-decoration-none" href="{{ route('product-detail-homepage') }}">
                                              <div class="pro-list-card card-kb position-relative p-3 h-100">
                                                  <img class="product-img w-100 border"
                                                      src="https://kohsantepheapdaily.com.kh/wp-content/uploads/2014/12/cb697714-53f6-4810-9404-dcdcbcf22efb.jpg"
@@ -161,7 +161,7 @@
                                                      <a class="btn align-content-center px-3 btn-pill-primary"
                                                          data-bs-toggle="modal" data-bs-target="#wishlistModal"><i
                                                              class="bi bi-heart me-1"></i>ពេញចិត្ត</a>
-                                                     <a href="product-detail.html"
+                                                     <a href="{{ route('product-detail-homepage') }}"
                                                          class="btn align-content-center px-3 btn-pill-primary"><i
                                                              class="bi bi-arrow-right me-1"></i>ព័ត៌មានលម្អិត</a>
                                                  </div>
@@ -171,7 +171,7 @@
 
                                      <!-- Card 4 -->
                                      <div class="pro-list col-12 col-md-6 col-lg-4">
-                                         <a class="text-decoration-none" href="product-detail.html">
+                                         <a class="text-decoration-none" href="{{ route('product-detail-homepage') }}">
                                              <div class="pro-list-card card-kb position-relative p-3 h-100">
                                                  <img class="product-img w-100 border"
                                                      src="https://i.pinimg.com/736x/6d/43/82/6d4382495c930a0fed1ad94fa5391eb8.jpg"
@@ -195,7 +195,7 @@
                                                      <a class="btn align-content-center px-3 btn-pill-primary"
                                                          data-bs-toggle="modal" data-bs-target="#wishlistModal"><i
                                                              class="bi bi-heart me-1"></i>ពេញចិត្ត</a>
-                                                     <a href="product-detail.html"
+                                                     <a href="{{ route('product-detail-homepage') }}"
                                                          class="btn align-content-center px-3 btn-pill-primary"><i
                                                              class="bi bi-arrow-right me-1"></i>ព័ត៌មានលម្អិត</a>
                                                  </div>
@@ -205,7 +205,7 @@
 
                                      <!-- Card 5 -->
                                      <div class="pro-list col-12 col-md-6 col-lg-4">
-                                         <a class="text-decoration-none" href="product-detail.html">
+                                         <a class="text-decoration-none" href="{{ route('product-detail-homepage') }}">
                                              <div class="pro-list-card card-kb position-relative p-3 h-100">
                                                  <img class="product-img w-100 border"
                                                      src="https://i.pinimg.com/1200x/54/14/74/5414749dba327dac0057c6fd6e260cb9.jpg"
@@ -229,7 +229,7 @@
                                                      <a class="btn align-content-center px-3 btn-pill-primary"
                                                          data-bs-toggle="modal" data-bs-target="#wishlistModal"><i
                                                              class="bi bi-heart me-1"></i>ពេញចិត្ត</a>
-                                                     <a href="product-detail.html"
+                                                     <a href="{{ route('product-detail-homepage') }}"
                                                          class="btn align-content-center px-3 btn-pill-primary"><i
                                                              class="bi bi-arrow-right me-1"></i>ព័ត៌មានលម្អិត</a>
                                                  </div>
@@ -263,7 +263,7 @@
                                                      <a class="btn align-content-center px-3 btn-pill-primary"
                                                          data-bs-toggle="modal" data-bs-target="#wishlistModal"><i
                                                              class="bi bi-heart me-1"></i>ពេញចិត្ត</a>
-                                                     <a href="product-detail.html"
+                                                     <a href="{{ route('product-detail-homepage') }}"
                                                          class="btn align-content-center px-3 btn-pill-primary"><i
                                                              class="bi bi-arrow-right me-1"></i>ព័ត៌មានលម្អិត</a>
                                                  </div>
@@ -296,7 +296,7 @@
                                                      <a class="btn align-content-center px-3 btn-pill-primary"
                                                          data-bs-toggle="modal" data-bs-target="#wishlistModal"><i
                                                              class="bi bi-heart me-1"></i>ពេញចិត្ត</a>
-                                                     <a href="product-detail.html"
+                                                     <a href="{{ route('product-detail-homepage') }}"
                                                          class="btn align-content-center px-3 btn-pill-primary"><i
                                                              class="bi bi-arrow-right me-1"></i>ព័ត៌មានលម្អិត</a>
                                                  </div>
@@ -953,26 +953,26 @@
 
              <!-- Cart Modal -->
              <!-- <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header bg-light">
-                      <h5 class="modal-title">
-                        <i class="bi bi-bag me-2"></i> Added to Cart
-                      </h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                      ✅ ផលិតផលត្រូវបានបន្ថែមទៅក្នុង Cart របស់អ្នក។
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Close
-                      </button>
-                      <a href="./cartNcheckout.html" class="btn btn-pill-primary">Go to Cart</a>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
+                                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                              <div class="modal-content">
+                                                                                <div class="modal-header bg-light">
+                                                                                  <h5 class="modal-title">
+                                                                                    <i class="bi bi-bag me-2"></i> Added to Cart
+                                                                                  </h5>
+                                                                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                  ✅ ផលិតផលត្រូវបានបន្ថែមទៅក្នុង Cart របស់អ្នក។
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                                                    Close
+                                                                                  </button>
+                                                                                  <a href="./cartNcheckout.html" class="btn btn-pill-primary">Go to Cart</a>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div> -->
 
              <!-- Wishlist Modal -->
              <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
@@ -991,7 +991,7 @@
                              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                  Close
                              </button>
-                             <a href="./wishlist.html" class="btn btn-pill-primary">ទៅកាន់បញ្ជីពេញចិត្ត</a>
+                             <a href="{{ route('wishlist') }}" class="btn btn-pill-primary">ទៅកាន់បញ្ជីពេញចិត្ត</a>
                          </div>
                      </div>
                  </div>

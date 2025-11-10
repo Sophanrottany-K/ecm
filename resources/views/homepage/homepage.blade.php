@@ -3,197 +3,11 @@
     @section('content')
         <main>
             <!-- hero banner area -->
-            <section class="hero-banner position-relative overflow-hidden">
-                <div class="container">
-                    <div class="hero-card rounded-4 position-relative">
-                        <div class="row g-5 align-items-center">
-                            <!-- Left: Copy + Actions -->
-                            <div class="col-lg-6">
-                                <div class="ps-2">
-                                    <div class="d-inline-flex align-items-center gap-2 mb-3">
-                                        <span
-                                            class="badge rounded-pill text-dark-emphasis fs-5">វេទិកាពាណិជ្ជកម្មសហការពីកម្ពុជា</span>
-                                        <span class="d-none d-md-inline"></span>
-                                        <span class="text-muted small d-none d-md-inline">ស្ថាបនាកម្មសហគមន៍ •
-                                            Community-driven</span>
-                                    </div>
 
-                                    <h1 class="display-5 fw-bold lh-tight mb-3">
-                                        <span class="kb-gradient-text">Boost Khmer Business</span>
-                                    </h1>
-
-                                    <p class="lead hero-sub mb-4">
-                                        វេទិកាដើម្បីលើកកម្ពស់ផលិតផលក្នុងស្រុក និងទំនុកចិត្ត — from
-                                        farms & workshops to your home.
-                                    </p>
-
-                                    <!--  search + CTAs stacked on mobile -->
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <a href="pages/login.html" class="btn btn-pill-primary btn-lg"><i
-                                                    class="bi bi-bag me-2"></i>ចាប់ផ្តើមទិញ</a>
-                                            <!-- user action ux flow will going to page auth  -->
-                                            <a href="pages/login.html" class="btn btn-pill-primary btn-lg rounded-pill"><i
-                                                    class="bi bi-box-seam me-2"></i>ចូលរួមជាអ្នកលក់</a>
-                                        </div>
-                                    </div>
-
-                                    <!-- trust by buyer  -->
-                                    <div class="d-flex flex-wrap align-items-center gap-4">
-                                        <div class="d-flex align-items-center">
-                                            <div class="avatar-stack me-2">
-                                                <img src="https://i.pravatar.cc/60?img=12"
-                                                    class="avatar rounded-circle border border-2 border-white"
-                                                    alt="រូបអ្នកទិញ" />
-                                                <img src="https://i.pravatar.cc/60?img=24"
-                                                    class="avatar rounded-circle border border-2 border-white"
-                                                    alt="រូបអ្នកទិញ" />
-                                                <img src="https://i.pravatar.cc/60?img=36"
-                                                    class="avatar rounded-circle border border-2 border-white"
-                                                    alt="រូបអ្នកទិញ" />
-                                            </div>
-                                            <small class="text-muted">អតិថិជនជាង ១០,០០០ នាក់ ពេញចិត្ត</small>
-                                        </div>
-                                        <div class="vr d-none d-md-inline"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right: Visual  -->
-                            <div class="col-lg-6">
-                                <div class="position-relative px-2 px-lg-4">
-                                    <!-- Main visual element-->
-                                    <img class="img-fluid rounded-4 shadow-strong w-100 object-fit-cover"
-                                        src="{{ asset('assets/images/hero-banner-kb.jpg') }}" alt="Khmer handicraft" />
-
-                                    <div class="floating-card shadow-lg rounded-4 ms-3 ms-lg-4 d-none d-lg-block animate"
-                                        style="width: 220px">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <img src="{{ asset('assets/images/product-img-2.jpg') }}"
-                                                class="rounded-3 object-fit-cover" style="width: 56px; height: 56px"
-                                                alt="product" />
-                                            <div>
-                                                <div class="fw-semibold">ម្រេចកំពត</div>
-                                                <small class="text-success">
-                                                    <i class="bi bi-graph-up-arrow me-1"></i> កំពុងពេញនិយម
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- floating element for special  -->
-                                    <div class="floating-card shadow rounded-4 mb-3 me-3 me-lg-4 d-none d-lg-block animate"
-                                        style="width: 260px">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                                <span class="fw-semibold">ព្រឹត្តិការណ៍ពិសេសថ្ងៃនេះ</span>
-                                                <i class="bi bi-stars"></i>
-                                            </div>
-                                            <ul class="list-unstyled mb-0 small">
-                                                <li class="d-flex align-items-center gap-2">
-                                                    <i class="bi bi-check2-circle"></i> កន្សែងសូត្រថ្មី
-                                                </li>
-                                                <li class="d-flex align-items-center gap-2">
-                                                    <i class="bi bi-check2-circle"></i>
-                                                    ស្ករត្នោតអ័រហ្គានិច
-                                                </li>
-                                                <li class="d-flex align-items-center gap-2">
-                                                    <i class="bi bi-check2-circle"></i> សិប្បកម្មពីសៀមរាប
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <!-- end hero banner -->
 
             <!-- Partner -->
-            <section class="py-5 partners-area">
-                <div class="container">
-                    <div class="section-header mb-4">
-                        <h3>ដៃគូរសហការណ៍</h3>
-                        <p class="text-secondary mb-0">
-                            សហការជាមួយរដ្ឋាភិបាល • អង្គការ • ក្រុមហ៊ុនឯកជន • សហគមន៍
-                        </p>
-                    </div>
 
-                    <div class="swiper" id="partnersSwiper" aria-label="Partners carousel">
-                        <div class="swiper-wrapper">
-                            <!-- MOC -->
-                            <div class="swiper-slide">
-                                <div class="partner-tile">
-                                    <div class="partner-logo">
-                                        <img src="{{ asset('assets/images/partner-moc.png') }}" alt="ក្រសួងពាណិជ្ជកម្ម" />
-                                    </div>
-                                    <div class="partner-name">ក្រសួងពាណិជ្ជកម្ម</div>
-                                    <div class="partner-meta">Government Partner</div>
-                                </div>
-                            </div>
-
-                            <!-- ABA -->
-                            <div class="swiper-slide">
-                                <div class="partner-tile">
-                                    <div class="partner-logo">
-                                        <img src="{{ asset('assets/images/partner-aba.png') }}" alt="ABA Bank" />
-                                    </div>
-                                    <div class="partner-name">ABA Bank</div>
-                                    <div class="partner-meta">Banking Partner</div>
-                                </div>
-                            </div>
-
-                            <!-- Wing -->
-                            <div class="swiper-slide">
-                                <div class="partner-tile">
-                                    <div class="partner-logo">
-                                        <img src="{{ asset('assets/images/partner-wing.jpg') }}" alt="Wing Cambodia" />
-                                    </div>
-                                    <div class="partner-name">Wing</div>
-                                    <div class="partner-meta">Fintech Partner</div>
-                                </div>
-                            </div>
-
-                            <!-- Fair Trade Cambodia -->
-                            <div class="swiper-slide">
-                                <div class="partner-tile">
-                                    <div class="partner-logo">
-                                        <img src="{{ asset('assets/images/partner-fade-trade.png') }}"
-                                            alt="Fair Trade Cambodia" />
-                                    </div>
-                                    <div class="partner-name">Fair Trade Cambodia</div>
-                                    <div class="partner-meta">NGO Partner</div>
-                                </div>
-                            </div>
-
-                            <!-- TrueMoney -->
-                            <div class="swiper-slide">
-                                <div class="partner-tile">
-                                    <div class="partner-logo">
-                                        <img src="{{ asset('assets/images/partner-vatanak.jpg') }}" alt="TrueMoney" />
-                                    </div>
-                                    <div class="partner-name">TrueMoney</div>
-                                    <div class="partner-meta">Payment Partner</div>
-                                </div>
-                            </div>
-
-                            <!-- Oxfam -->
-                            <div class="swiper-slide">
-                                <div class="partner-tile">
-                                    <div class="partner-logo">
-                                        <img src="{{ asset('assets/images/partner-ox.png') }}" alt="Oxfam Cambodia" />
-                                    </div>
-                                    <div class="partner-name">Oxfam Cambodia</div>
-                                    <div class="partner-meta">NGO Partner</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
 
             <!-- PRODUCT-FEATURE -->
             <section class="product-feature py-5 mb-5">
@@ -229,8 +43,8 @@
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link btn-glass px-3" id="pf-craft-tab" data-bs-toggle="pill"
-                                        data-bs-target="#pf-craft" type="button" role="tab"
-                                        aria-controls="pf-craft" aria-selected="false">
+                                        data-bs-target="#pf-craft" type="button" role="tab" aria-controls="pf-craft"
+                                        aria-selected="false">
                                         សិប្បកម្ម
                                     </button>
                                 </li>
@@ -248,8 +62,8 @@
                     <!-- បញ្ជីផលិតផល -->
                     <div class="tab-content pt-2">
                         <!-- ទាំងអស់ -->
-                        <div class="tab-pane fade show active" id="pf-all" role="tabpanel"
-                            aria-labelledby="pf-all-tab" tabindex="0">
+                        <div class="tab-pane fade show active" id="pf-all" role="tabpanel" aria-labelledby="pf-all-tab"
+                            tabindex="0">
                             <div class="row g-4">
                                 <!-- CARD 1 -->
                                 <div class="col-12 col-sm-6 col-lg-3">
@@ -257,8 +71,7 @@
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
                                                 <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/product-img-1.jpg') }}"
-                                                    alt="Palm sugar" />
+                                                    src="{{ asset('assets/images/product-img-1.jpg') }}" alt="Palm sugar" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
 
@@ -329,8 +142,7 @@
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
                                                 <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/product-img-2.jpg') }}"
-                                                    alt="Pepper" />
+                                                    src="{{ asset('assets/images/product-img-2.jpg') }}" alt="Pepper" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
 
@@ -365,8 +177,7 @@
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
                                                 <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/product-img-3.jpg') }}"
-                                                    alt="Ceramic" />
+                                                    src="{{ asset('assets/images/product-img-3.jpg') }}" alt="Ceramic" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
 
@@ -507,8 +318,7 @@
                                         <div class="card card-kb h-100">
                                             <div class="position-relative">
                                                 <img class="card-img-top rounded-3 border"
-                                                    src="{{ asset('assets/images/angkor-milke.jpeg') }}"
-                                                    alt="Ceramic" />
+                                                    src="{{ asset('assets/images/angkor-milke.jpeg') }}" alt="Ceramic" />
                                                 <span class="badge badge-verified position-absolute start-0 m-2">
                                                     Verified
 
@@ -651,7 +461,7 @@
 
                                     <!-- Actions -->
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="./vendors.html" class="btn btn-pill-primary w-75"><i
+                                        <a href="{{ route('vendor-homepage') }}" class="btn btn-pill-primary w-75"><i
                                                 class="bi bi-shop me-1"></i>ចូលមើលហាង</a>
                                     </div>
                                 </div>
@@ -712,7 +522,7 @@
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="./vendors.html" class="btn btn-pill-primary w-75"><i
+                                        <a href="{{ route('vendor-homepage') }}" class="btn btn-pill-primary w-75"><i
                                                 class="bi bi-shop me-1"></i>ចូលមើលហាង</a>
                                     </div>
                                 </div>
@@ -771,7 +581,7 @@
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-center gap-2">
-                                        <a href="./vendors.html" class="btn btn-pill-primary w-75"><i
+                                        <a href="{{ route('vendor-homepage') }}" class="btn btn-pill-primary w-75"><i
                                                 class="bi bi-shop me-1"></i>ចូលមើលហាង</a>
                                     </div>
                                 </div>
@@ -885,92 +695,7 @@
             </section>
 
             <!-- GUIDES -->
-            <section class="py-5">
-                <div class="container">
-                    <div class="d-flex align-items-end justify-content-between mb-4 section-head">
-                        <h2 class="h3 fw-bold m-0">មគ្គុទ្ទេសក៍</h2>
-                        <a href="#" class="link-underline link-underline-opacity-0">មើលទាំងអស់</a>
-                    </div>
 
-                    <div class="row g-4">
-                        <!-- Seller Guide -->
-                        <div class="col-12 col-md-4">
-                            <div class="card card-kb h-100 rounded-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div
-                                            class="avatar-56 d-inline-flex align-items-center justify-content-center rounded-circle bg-dark-subtle me-3">
-                                            <i class="bi bi-shop fs-4"></i>
-                                        </div>
-                                        <div>
-                                            <h5 class="card-title mb-0">មគ្គុទ្ទេសក៍អ្នកលក់</h5>
-                                            <small>Seller Guide</small>
-                                        </div>
-                                    </div>
-                                    <ul class="small ps-3 mb-4 card-title">
-                                        <li>បង្កើត Store & បន្ថែមផលិតផល</li>
-                                        <li>តម្លៃ, ស្តុក, និងរូបភាព</li>
-                                        <li>ការទទួលប្រាក់ (ABA/Wing/TrueMoney)</li>
-                                    </ul>
-                                    <a href="/pages/guides.html" class="btn btn-pill-primary w-100">
-                                        <i class="bi bi-journal-text me-2"></i>អានការណែនាំ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Seller Guide -->
-                        <div class="col-12 col-md-4">
-                            <div class="card card-kb h-100 rounded-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div
-                                            class="avatar-56 d-inline-flex align-items-center justify-content-center rounded-circle bg-dark-subtle me-3">
-                                            <i class="bi bi-shield-check fs-4"></i>
-                                        </div>
-                                        <div>
-                                            <h5 class="card-title mb-0">គោលការណ៍ទុកចិត្ត</h5>
-                                            <small>ការផ្ទៀងផ្ទាត់ & សុវត្ថិភាព</small>
-                                        </div>
-                                    </div>
-                                    <ul class="small ps-3 mb-4 card-title">
-                                        <li>Badge ផលិតផល/អ្នកលក់បានផ្ទៀងផ្ទាត់</li>
-                                        <li>ប្រភពផលិតផល & Transparency</li>
-                                        <li>Reviews & Ratings</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-pill-primary w-100">
-                                        <i class="bi bi-patch-check me-2"></i>មើលគោលការណ៍
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- buyer Guide -->
-                        <div class="col-12 col-md-4">
-                            <div class="card card-kb h-100 rounded-4 shadow-sm">
-                                <div class="card-body">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div
-                                            class="avatar-56 d-inline-flex align-items-center justify-content-center rounded-circle bg-dark-subtle me-3">
-                                            <i class="bi bi-cart-check fs-4"></i>
-                                        </div>
-                                        <div>
-                                            <h5 class="card-title mb-0">មគ្គុទ្ទេសក៍អ្នកទិញ</h5>
-                                            <small>ការណែនាំពីអ្នកទិញ</small>
-                                        </div>
-                                    </div>
-                                    <ul class="small ps-3 mb-4 card-title">
-                                        <li>ស្វែងរក & ច្រោះតាម Category/តម្លៃ/តំបន់</li>
-                                        <li>Cart & Checkout (COD/QR Payments)</li>
-                                        <li>តាមដានការកម្មង់</li>
-                                    </ul>
-                                    <a href="#" class="btn btn-pill-primary rounded-pill w-100">
-                                        <i class="bi bi-hand-index-thumb me-2"></i>តោះចាប់ផ្តើមទិញ
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- Blog Area -->
             <section class="py-5 blog-area">
@@ -1176,20 +901,6 @@
             <!-- CHECKOUT STEPS -->
 
             <!-- CTA -->
-            <section class="py-5">
-                <div class="container">
-                    <div class="glass-soft p-4 p-lg-5 d-lg-flex align-items-center justify-content-between rounded-xl">
-                        <div class="mb-3 mb-lg-0">
-                            <h3 class="fw-bold mb-2">ចូលរួមជាអ្នកលក់ / អ្នកផលិត</h3>
-                            <p class="card-text mb-0">
-                                បង្កើនការមើលឃើញ និងលក់ជាមួយ KhmerBoost – ការផ្ទៀងផ្ទាត់
-                                និងជំនួយផ្នែកពាណិជ្ជកម្ម។
-                            </p>
-                        </div>
-                        <a href="./pages/register.html" class="btn btn-pill-primary btn-lg"><i
-                                class="bi bi-person-plus me-2"></i>តស់ចាប់ផ្តើម</a>
-                    </div>
-                </div>
-            </section>
+
         </main>
     @endsection

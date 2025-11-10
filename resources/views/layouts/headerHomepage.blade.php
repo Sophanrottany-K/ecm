@@ -73,23 +73,7 @@
                             </li>
 
                             <!-- Vendors mega (desktop) -->
-                            <li class="nav-item dropdown dropdown-mega">
-                                <a class="nav-link dropdown-toggle kb-underline" href=""
-                                    aria-expanded="false">អ្នកផលិត</a>
-                                <div class="dropdown-menu" data-mega>
-                                    <div class="row g-3">
-                                        <div class="col-12 col-md-12 menu-col">
-                                            <div class="menu-title">រុករក</div>
-                                            <a href="{{ route('vendor-list-homepage') }}"><i class="bi bi-people"></i>
-                                                បញ្ជីអ្នកលក់</a>
 
-                                            <div class="menu-title">សម្រាប់អ្នកលក់</div>
-                                            <a href="pages/guides.html"><i class="bi bi-journal-text"></i>
-                                                មគ្គុទេសក៍អ្នកលក់</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
 
 
 
@@ -145,12 +129,13 @@
                                         <a href="{{ route('profile') }}" class="text-allTheme">ប្រវត្តិរូបខ្ញុំ</a>
                                     </li>
                                     <li class="user-dropdown-item menu-col">
-                                        <a href="../pages/orderHistory.html" class="text-allTheme">ប្រវត្តិកម្មង់</a>
+                                        <a href="{{ route('order-history') }}" class="text-allTheme">ប្រវត្តិកម្មង់</a>
                                     </li>
                                     <li class="user-dropdown-item menu-col">
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
-                                            <button type="submit" class="border-0 ">
+                                            <button type="submit" class="border-0 bg-transparent btn "
+                                                data-bs-toggle="modal" data-bs-target="#authQ">
                                                 ចាក់ចេញ
                                             </button>
                                         </form>
@@ -169,7 +154,7 @@
     <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="mobileMenuLabel">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ route('homepage') }}">
                     <img src="{{ asset('assets/images/logo.png') }}" alt="brand-logo" class="logo-kb w-50 h-50"
                         data-theme-logo />
                 </a>
@@ -179,7 +164,7 @@
         <div class="offcanvas-body d-flex flex-column gap-2" accordion>
             <a class="offcanvas-link text-start" href="{{ route('homepage') }}">ទំព័រដើម</a>
 
-            <a class="offcanvas-link text-start" href="pages/products.html">ផលិតផល</a>
+            <a class="offcanvas-link text-start" href="{{ route('product-homepage') }}">ផលិតផល</a>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item mb-2">
                     <h2 class="accordion-header" id="headingThree">
@@ -193,38 +178,18 @@
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body w-100">
                             <a class="offcanvas-link text-start d-inline-block mb-2"
-                                href="pages/products.html">បញ្ជីនាក់លក់
+                                href="{{ route('vendor-list-homepage') }}">បញ្ជីនាក់លក់
                             </a>
-                            <a class="offcanvas-link text-start d-inline-block"
-                                href="pages/guides.html">មគ្គុទ្ទេសក៍នាក់លក់
-                            </a>
+
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="Tourism">
-                        <button class="accordion-button collapsed offcanvas-link text-start" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#collapsetourism" aria-expanded="false"
-                            aria-controls="collapsetourism">
-                            ទេសចរណ៍
-                        </button>
-                    </h2>
-                    <div id="collapsetourism" class="accordion-collapse collapse" aria-labelledby="Tourism"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body w-100">
-                            <a class="offcanvas-link text-start d-inline-block mb-2"
-                                href="pages/tourisim.html">គោលដៅទេសចរណ៍
-                            </a>
-                            <a class="offcanvas-link text-start d-inline-block" href="pages/event.html">ព្រឹត្តិការណ៍
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
-            <a class="offcanvas-link text-start" href="./blog.html">ប្លុក</a>
-            <a class="offcanvas-link text-start" href="./about.html">អំពីយើង</a>
-            <a class="offcanvas-link text-start" href="./contact.html">ទំនាក់ទំនង</a>
+
+
+            <a class="offcanvas-link text-start" href="{{ route('contact-homepage') }}">ទំនាក់ទំនង</a>
 
             <div class="border-top pt-3 mt-3 d-flex justify-content-between align-items-center gap-3">
                 <div class="d-flex align-items-center gap-3">
@@ -232,7 +197,7 @@
                     <button data-theme-toggle class="btn btn-theme-mode" title="Toggle theme" type="button">
                         <i class="bi bi-sun"></i>
                     </button>
-                    <a href="pages/cartNcheckout.html" class="nav-link-chart position-relative">
+                    <a href="{{ route('cart-homepage') }}" class="nav-link-chart position-relative">
                         <i class="bi bi-cart3 fs-5"></i>
                         <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
