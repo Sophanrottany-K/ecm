@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'index')->name('index');
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact-index');
-Route::view('/product', 'product')->name('product-index');
+Route::view('/products', 'product')->name('product-index');
 Route::view('/vendor-list', 'vendor-list')->name('vendor-list-index');
 Route::view('/product-detail', 'product-detail')->name('product-detail-index');
 Route::view('/vendor-detail', 'vendor-detail')->name('vendor-detail-index');
@@ -63,3 +64,7 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/seller', [AuthController::class, 'sellerDashboard'])->name('homepage.seller');
     Route::get('/customer', [AuthController::class, 'customerDashboard'])->name('homepage.customer');
 });
+
+
+route::resource('/product', ProductController::class);
+route::resource('/category', CategoryController::class);

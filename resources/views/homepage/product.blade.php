@@ -953,26 +953,26 @@
 
              <!-- Cart Modal -->
              <!-- <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-                                                                            <div class="modal-dialog modal-dialog-centered">
-                                                                              <div class="modal-content">
-                                                                                <div class="modal-header bg-light">
-                                                                                  <h5 class="modal-title">
-                                                                                    <i class="bi bi-bag me-2"></i> Added to Cart
-                                                                                  </h5>
-                                                                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                                <div class="modal-dialog modal-dialog-centered">
+                                                                                  <div class="modal-content">
+                                                                                    <div class="modal-header bg-light">
+                                                                                      <h5 class="modal-title">
+                                                                                        <i class="bi bi-bag me-2"></i> Added to Cart
+                                                                                      </h5>
+                                                                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                      ✅ ផលិតផលត្រូវបានបន្ថែមទៅក្នុង Cart របស់អ្នក។
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                                                        Close
+                                                                                      </button>
+                                                                                      <a href="./cartNcheckout.html" class="btn btn-pill-primary">Go to Cart</a>
+                                                                                    </div>
+                                                                                  </div>
                                                                                 </div>
-                                                                                <div class="modal-body">
-                                                                                  ✅ ផលិតផលត្រូវបានបន្ថែមទៅក្នុង Cart របស់អ្នក។
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                                                    Close
-                                                                                  </button>
-                                                                                  <a href="./cartNcheckout.html" class="btn btn-pill-primary">Go to Cart</a>
-                                                                                </div>
-                                                                              </div>
-                                                                            </div>
-                                                                          </div> -->
+                                                                              </div> -->
 
              <!-- Wishlist Modal -->
              <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
