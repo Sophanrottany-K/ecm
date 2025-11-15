@@ -10,16 +10,27 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    // Show the current user's cart
+    // Show cart
     public function index()
     {
-        $cart = Cart::firstOrCreate(['user_id' => Auth::id()]);
-        $items = $cart->items()->with('product')->get();
+        $user = Auth::user();
 
-        return view('cart.index', compact('cart', 'items'));
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Please login to view your cart.');
+        }
+
+        // Get or create cart for the user
+        $cart = Cart::firstOrCreate(
+            ['user_id' => $user->user_id]
+        );
+
+        // Eager load items with their products
+        $cart->load('items.product');
+
+        return view('cartNcheckout', compact('cart'));
     }
 
-    // Add product to cart
+    // Add to cart
     public function add(Request $request)
     {
         $request->validate([
@@ -27,49 +38,59 @@ class CartController extends Controller
             'quantity'   => 'required|integer|min:1'
         ]);
 
-        $cart = Cart::firstOrCreate(['user_id' => Auth::id()]);
+        $user = Auth::user();
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Please login first.');
+        }
 
-        $product = Product::findOrFail($request->product_id);
+        $cart = Cart::firstOrCreate(['user_id' => $user->user_id]);
 
-        $cartItem = CartItem::updateOrCreate(
-            ['cart_id' => $cart->cart_id, 'product_id' => $product->product_id],
-            [
-                'quantity' => \DB::raw("quantity + {$request->quantity}"),
-                'price'    => $product->price
-            ]
-        );
+        $product = Product::where('product_id', $request->product_id)->firstOrFail();
 
-        return redirect()->back()->with('success', 'Product added to cart!');
+        $item = CartItem::firstOrNew([
+            'cart_id' => $cart->cart_id,
+            'product_id' => $product->product_id
+        ]);
+
+        $item->quantity = ($item->exists ? $item->quantity + $request->quantity : $request->quantity);
+        $item->price = $product->price;
+        $item->save();
+
+        return redirect()->route('cart.index')->with('success', 'Product added to cart!');
     }
 
-    // Remove item from cart
-    public function remove($cart_item_id)
-    {
-        $item = CartItem::findOrFail($cart_item_id);
-        $item->delete();
-
-        return redirect()->back()->with('success', 'Item removed from cart.');
-    }
-
-    // Update item quantity
-    public function update(Request $request, $cart_item_id)
+    // Update cart item quantity
+    public function update(Request $request, $product_id)
     {
         $request->validate([
             'quantity' => 'required|integer|min:1'
         ]);
 
-        $item = CartItem::findOrFail($cart_item_id);
-        $item->update(['quantity' => $request->quantity]);
+        $user = Auth::user();
+        $cart = Cart::firstOrCreate(['user_id' => $user->user_id]);
 
-        return redirect()->back()->with('success', 'Cart updated successfully.');
+        $item = CartItem::where('cart_id', $cart->cart_id)
+            ->where('product_id', $product_id)
+            ->first();
+
+        if ($item) {
+            $item->quantity = $request->quantity;
+            $item->save();
+        }
+
+        return back()->with('success', 'Cart updated!');
     }
 
-    // Clear the cart
-    public function clear()
+    // Remove item from cart
+    public function remove($product_id)
     {
-        $cart = Cart::firstOrCreate(['user_id' => Auth::id()]);
-        $cart->items()->delete();
+        $user = Auth::user();
+        $cart = Cart::firstOrCreate(['user_id' => $user->user_id]);
 
-        return redirect()->back()->with('success', 'Cart cleared.');
+        CartItem::where('cart_id', $cart->cart_id)
+            ->where('product_id', $product_id)
+            ->delete();
+
+        return back()->with('success', 'Item removed!');
     }
 }

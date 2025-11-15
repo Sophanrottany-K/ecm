@@ -132,7 +132,7 @@
                     </a>
 
                     <div class="text-center mb-5 mb-md-0">
-                        <span class="text-nowrap">មិនមានគណនីមែនទេ?<a href="../pages/register.html"
+                        <span class="text-nowrap">មិនមានគណនីមែនទេ?<a href="{{ route('register.role') }}"
                                 class="ms-2">ចុះឈ្មោះ</a>
                         </span>
                     </div>

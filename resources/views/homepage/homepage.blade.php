@@ -70,7 +70,7 @@
                                     <div class="row g-4">
                                         @foreach ($products as $product)
                                             <div class="col-12 col-sm-6 col-lg-3">
-                                                <a href="{{ route('product.show', $product->product_id) }}"
+                                                <a href="{{ route('productHomepage.show', $product->product_id) }}"
                                                     class="text-decoration-none text-dark">
                                                     <div class="card card-kb h-100">
                                                         <div class="position-relative">
@@ -98,9 +98,17 @@
                                                             <div class="d-flex justify-content-between align-items-center">
                                                                 <div class="price">${{ number_format($product->price, 2) }}
                                                                 </div>
-                                                                <button class="btn btn-pill-primary btn-sm">
-                                                                    <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                                </button>
+                                                                <form action="{{ route('cart.add') }}" method="POST"
+                                                                    class="d-inline">
+                                                                    @csrf
+                                                                    <input type="hidden" name="product_id"
+                                                                        value="{{ $product->product_id }}">
+                                                                    <input type="hidden" name="quantity" value="1">
+                                                                    <button type="submit"
+                                                                        class="btn btn-pill-primary me-2 mt-2">
+                                                                        <i class="bi bi-bag me-2"></i>បន្ថែមទៅកន្រ្តក
+                                                                    </button>
+                                                                </form>
                                                             </div>
                                                         </div>
                                                     </div>

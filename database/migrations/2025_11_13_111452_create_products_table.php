@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('product_id'); // Primary Key
-            $table->unsignedBigInteger('store_id'); // Foreign Key
+            // Foreign Key
             $table->unsignedBigInteger('category_id'); // Foreign Key
             $table->unsignedBigInteger('color_id');
             $table->unsignedBigInteger('size_id');
             $table->string('name');
-            $table->text('description'); //can be null
+            $table->text('description')->nullable(); //can be null
             $table->decimal('price', 10, 2);
             $table->integer('stock');
             $table->enum('status', ['Active', 'Inactive', 'OutOfStock', 'Discontinued', 'Draft'])
@@ -28,7 +28,7 @@ return new class extends Migration
 
             $table->foreign('size_id')->references('size_id')->on('sizes')->onDelete('cascade');
             $table->foreign('color_id')->references('color_id')->on('colors')->onDelete('cascade');
-            $table->foreign('store_id')->references('store_id')->on('stores')->onDelete('cascade');
+
             $table->foreign('category_id')->references('category_id')->on('categories')->onDelete('cascade');
         });
     }

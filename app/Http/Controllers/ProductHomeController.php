@@ -10,6 +10,9 @@ class ProductHomeController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+
+
     public function index()
     {
         //
@@ -36,9 +39,13 @@ class ProductHomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $product_id)
     {
         //
+        $product = Product::with(['category', 'color', 'size'])
+            ->findOrFail($product_id);
+
+        return view('homepage.product-detail', compact('product'));
     }
 
     /**

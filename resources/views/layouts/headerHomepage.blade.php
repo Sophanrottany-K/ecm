@@ -109,7 +109,7 @@
                                 </a>
                             </li>
                             <li class="nav-item me-2 position-relative">
-                                <a href="{{ route('cart-homepage') }}" class="nav-link position-relative">
+                                <a href="{{ route('cart.index') }}" class="nav-link position-relative">
                                     <i class="bi bi-cart3"></i>
                                     <span
                                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>

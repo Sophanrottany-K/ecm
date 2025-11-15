@@ -24,10 +24,11 @@ Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact-index');
 Route::view('/products', 'product')->name('product-index');
 Route::view('/vendor-list', 'vendor-list')->name('vendor-list-index');
-Route::view('/product-detail', 'product-detail')->name('product-detail-index');
 Route::view('/vendor-detail', 'vendor-detail')->name('vendor-detail-index');
 Route::view('/vendor', 'vendor')->name('vendor-index');
 
+// Dynamic product detail
+Route::get('/product-detail/{product}', [ProductController::class, 'show'])->name('product-detail');
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,11 @@ Route::view('/vendor', 'vendor')->name('vendor-index');
 Route::prefix('homepage')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
-    Route::view('/product-detail', 'homepage.product-detail')->name('product-detail-homepage');
+    // Dynamic product detail
+    Route::get('/product-detail/{product}', [ProductHomeController::class, 'show'])->name('product-detail-homepage');
+
     Route::view('/order-history', 'homepage.orderHistory')->name('order-history');
-    Route::view('/vendor-deta   il', 'homepage.vendor-detail')->name('vendor-detail-homepage');
+    Route::view('/vendor-detail', 'homepage.vendor-detail')->name('vendor-detail-homepage');
     Route::view('/vendor', 'homepage.vendor')->name('vendor-homepage');
     Route::view('/vendor-list', 'homepage.vendor-list')->name('vendor-list-homepage');
     Route::view('/profile', 'homepage.profile')->name('profile');
@@ -47,7 +50,6 @@ Route::prefix('homepage')->group(function () {
     Route::view('/contact', 'homepage.contact')->name('contact-homepage');
     Route::view('/cart', 'homepage.cartNcheckout')->name('cart-homepage');
 });
-
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +63,6 @@ Route::post('/register/step1', [AuthController::class, 'registerStep1'])->name('
 Route::post('/register/step2', [AuthController::class, 'registerStep2'])->name('register.step2');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-
 /*
 |--------------------------------------------------------------------------
 | Dashboards
@@ -73,16 +74,27 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/customer', [AuthController::class, 'customerDashboard'])->name('homepage.customer');
 });
 
-
-route::resource('/product', ProductController::class);
-route::resource('/category', CategoryController::class);
-
+/*
+|--------------------------------------------------------------------------
+| Resources
+|--------------------------------------------------------------------------
+*/
+Route::resource('product', ProductController::class);
+Route::resource('category', CategoryController::class);
 Route::resource('size', SizeController::class);
 Route::resource('color', ColorController::class);
 Route::resource('order', OrderController::class);
 Route::resource('payment', PaymentController::class);
 Route::resource('transaction', TransactionController::class);
-
-// Carts
-Route::resource('cart', CartController::class);
 Route::resource('productHomepage', ProductHomeController::class);
+
+/*
+|--------------------------------------------------------------------------
+| Cart Routes
+|--------------------------------------------------------------------------
+*/
+// Session-based AJAX cart
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+Route::put('/cart/update/{cart_item_id}', [CartController::class, 'update'])->name('cart.update');
+Route::delete('/cart/remove/{cart_item_id}', [CartController::class, 'remove'])->name('cart.remove');

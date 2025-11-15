@@ -18,7 +18,6 @@ class ProductController extends Controller
     {
         $products = Product::with(['category', 'color', 'size'])->latest()->paginate(10);
         return view('products.index', compact('products'));
-        
     }
 
     /**
@@ -81,7 +80,7 @@ class ProductController extends Controller
         $product = Product::with(['category', 'color', 'size'])
             ->findOrFail($product_id);
 
-        return view('products.show', compact('product'));
+        return view('products.index', compact('product'));
     }
 
     /**
