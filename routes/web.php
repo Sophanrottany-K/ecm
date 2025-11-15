@@ -3,6 +3,14 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ColorController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductHomeController;
+use App\Http\Controllers\SizeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,11 +35,11 @@ Route::view('/vendor', 'vendor')->name('vendor-index');
 |--------------------------------------------------------------------------
 */
 Route::prefix('homepage')->group(function () {
-    Route::view('/homepage', 'homepage.homepage')->name('homepage');
-    Route::view('/product', 'homepage.product')->name('product-homepage');
+    Route::get('/', [HomeController::class, 'index'])->name('homepage');
+
     Route::view('/product-detail', 'homepage.product-detail')->name('product-detail-homepage');
     Route::view('/order-history', 'homepage.orderHistory')->name('order-history');
-    Route::view('/vendor-detail', 'homepage.vendor-detail')->name('vendor-detail-homepage');
+    Route::view('/vendor-deta   il', 'homepage.vendor-detail')->name('vendor-detail-homepage');
     Route::view('/vendor', 'homepage.vendor')->name('vendor-homepage');
     Route::view('/vendor-list', 'homepage.vendor-list')->name('vendor-list-homepage');
     Route::view('/profile', 'homepage.profile')->name('profile');
@@ -68,3 +76,13 @@ Route::prefix('dashboard')->group(function () {
 
 route::resource('/product', ProductController::class);
 route::resource('/category', CategoryController::class);
+
+Route::resource('size', SizeController::class);
+Route::resource('color', ColorController::class);
+Route::resource('order', OrderController::class);
+Route::resource('payment', PaymentController::class);
+Route::resource('transaction', TransactionController::class);
+
+// Carts
+Route::resource('cart', CartController::class);
+Route::resource('productHomepage', ProductHomeController::class);

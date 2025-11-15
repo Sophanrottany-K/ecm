@@ -68,7 +68,7 @@
 
                             <!-- Products mega (desktop) -->
                             <li class="nav-item dropdown dropdown-mega">
-                                <a class="nav-link kb-underline" href="{{ route('product-homepage') }}"
+                                <a class="nav-link kb-underline" href="{{ url('productHomepage') }}"
                                     aria-expanded="false">ផលិតផល</a>
                             </li>
 
@@ -164,7 +164,7 @@
         <div class="offcanvas-body d-flex flex-column gap-2" accordion>
             <a class="offcanvas-link text-start" href="{{ route('homepage') }}">ទំព័រដើម</a>
 
-            <a class="offcanvas-link text-start" href="{{ route('product-homepage') }}">ផលិតផល</a>
+            <a class="offcanvas-link text-start" href="{{ url('productHomepage') }}">ផលិតផល</a>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item mb-2">
                     <h2 class="accordion-header" id="headingThree">

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('color_id');
             $table->unsignedBigInteger('size_id');
             $table->string('name');
-            $table->text('description');
+            $table->text('description'); //can be null
             $table->decimal('price', 10, 2);
             $table->integer('stock');
             $table->enum('status', ['Active', 'Inactive', 'OutOfStock', 'Discontinued', 'Draft'])

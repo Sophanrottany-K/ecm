@@ -12,15 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product_images', function (Blueprint $table) {
-            $table->bigIncrements('image_id'); // Primary Key
-            $table->unsignedBigInteger('product_id'); // Foreign Key
-            $table->string('image_url');
+            $table->id('image_id');
+            $table->unsignedBigInteger('product_id');
+            $table->string('image_path');
             $table->timestamps();
 
             $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
         });
     }
-
     /**
      * Reverse the migrations.
      */

@@ -66,286 +66,51 @@
                             tabindex="0">
                             <div class="row g-4">
                                 <!-- CARD 1 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/product-img-1.jpg') }}" alt="Palm sugar" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
+                                <section class="products">
+                                    <div class="row g-4">
+                                        @foreach ($products as $product)
+                                            <div class="col-12 col-sm-6 col-lg-3">
+                                                <a href="{{ route('product.show', $product->product_id) }}"
+                                                    class="text-decoration-none text-dark">
+                                                    <div class="card card-kb h-100">
+                                                        <div class="position-relative">
+                                                            @if ($product->image)
+                                                                <img class="card-img-top rounded-3"
+                                                                    src="{{ asset('storage/' . $product->image) }}"
+                                                                    alt="{{ $product->name }}" />
+                                                            @else
+                                                                <img class="card-img-top rounded-3"
+                                                                    src="{{ asset('assets/images/placeholder.jpg') }}"
+                                                                    alt="No image" />
+                                                            @endif
+                                                            <span
+                                                                class="badge badge-verified position-absolute start-0 m-2">
+                                                                Verified <i class="bi bi-patch-check-fill"></i>
+                                                            </span>
+                                                            <button type="button"
+                                                                class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
+                                                                <i class="bi bi-heart"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">{{ $product->name }}</h5>
+                                                            <p class="card-text text-muted">{{ $product->description }}</p>
+                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                <div class="price">${{ number_format($product->price, 2) }}
+                                                                </div>
+                                                                <button class="btn btn-pill-primary btn-sm">
+                                                                    <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </section>
 
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Palm sugar -->
-                                                <h5 class="card-title">ស្ករត្នោត</h5>
-                                                <!-- EN: Organic product from Kampong Speu -->
-                                                <p class="card-text text-muted">
-                                                    ផលិតផលអ័រហ្គានិកពីខេត្តកំពង់ស្ពឺ
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$4.50</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
 
-                                <!-- CARD 2 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/products/il_fullxfull.6317552416_mx5q.avif') }}"
-                                                    alt="Silk scarf" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
-
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Silk scarf -->
-                                                <h5 class="card-title">ក្រមា</h5>
-                                                <!-- EN: Handwoven by local artisans -->
-                                                <p class="card-text text-muted small">
-                                                    ត្បាញដោយដៃដោយសិប្បករខ្មែរ
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$12.00</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- CARD 3 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/product-img-2.jpg') }}" alt="Pepper" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
-
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Kampot pepper -->
-                                                <h5 class="card-title">ម្រេចកំពត</h5>
-                                                <!-- EN: Geographical Indication (GI) -->
-                                                <p class="card-text text-muted small">
-                                                    សញ្ញាសម្គាល់ភូមិសាស្ត្រ (GI)
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$7.00</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- CARD 4 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/product-img-3.jpg') }}" alt="Ceramic" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
-
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Handmade ceramic -->
-                                                <h5 class="card-title">សេរ៉ាមិចធ្វើដោយដៃ</h5>
-                                                <!-- EN: Minimal rustic design -->
-                                                <p class="card-text text-muted small">
-                                                    រចនាបែបសាមញ្ញជាយទំនើប
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$18.00</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- CARD 5 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3 bg-warning-subtle"
-                                                    src="{{ asset('assets/images/kiriku.png') }}" alt="Ceramic" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
-
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Handmade ceramic -->
-                                                <h5 class="card-title">សេរ៉ាមិចធ្វើដោយដៃ</h5>
-                                                <!-- EN: Minimal rustic design -->
-                                                <p class="card-text text-muted small">
-                                                    រចនាបែបសាមញ្ញជាយទំនើប
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$18.00</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- CARD 6 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/sabo.png') }}" alt="Ceramic" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
-
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Handmade ceramic -->
-                                                <h5 class="card-title">សេរ៉ាមិចធ្វើដោយដៃ</h5>
-                                                <!-- EN: Minimal rustic design -->
-                                                <p class="card-text text-muted small">
-                                                    រចនាបែបសាមញ្ញជាយទំនើប
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$18.00</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- CARD 7 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3"
-                                                    src="{{ asset('assets/images/Mchhou krerng.webp') }}"
-                                                    alt="Ceramic" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
-
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Handmade ceramic -->
-                                                <h5 class="card-title">សេរ៉ាមិចធ្វើដោយដៃ</h5>
-                                                <!-- EN: Minimal rustic design -->
-                                                <p class="card-text text-muted small">
-                                                    រចនាបែបសាមញ្ញជាយទំនើប
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$18.00</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- CARD 8 -->
-                                <div class="col-12 col-sm-6 col-lg-3">
-                                    <a href="pages/cartNcheckout.html" class="text-decoration-none text-dark">
-                                        <div class="card card-kb h-100">
-                                            <div class="position-relative">
-                                                <img class="card-img-top rounded-3 border"
-                                                    src="{{ asset('assets/images/angkor-milke.jpeg') }}" alt="Ceramic" />
-                                                <span class="badge badge-verified position-absolute start-0 m-2">
-                                                    Verified
-
-                                                    <i class="bi bi-patch-check-fill"></i>
-                                                </span>
-                                                <button type="button"
-                                                    class="btn btn-glass btn-sm position-absolute top-0 end-0 m-2 active-heart">
-                                                    <i class="bi bi-heart"></i>
-                                                </button>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- EN: Handmade ceramic -->
-                                                <h5 class="card-title">សេរ៉ាមិចធ្វើដោយដៃ</h5>
-                                                <!-- EN: Minimal rustic design -->
-                                                <p class="card-text text-muted small">
-                                                    រចនាបែបសាមញ្ញជាយទំនើប
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="price">$18.00</div>
-                                                    <button class="btn btn-pill-primary btn-sm">
-                                                        <i class="bi bi-bag me-1"></i>ដាក់ចូលកន្រ្តក
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
                             </div>
                         </div>
 

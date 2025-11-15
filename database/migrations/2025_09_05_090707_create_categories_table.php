@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('category_id');
             $table->string('category_name', 100);
-            $table->string('description');
+            $table->string('description'); //can be null
             $table->timestamps();
         });
     }
